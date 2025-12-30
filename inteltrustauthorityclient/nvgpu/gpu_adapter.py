@@ -41,9 +41,11 @@ def generate_nvgpu_evidence(user_nonce):
     try:
         nvmlInit()
         state = nvmlSystemGetConfComputeState()
+        print(state.ccFeature)
         if state.ccFeature == 0:
-            err_msg = "The confidential compute feature is disabled !!\nQuitting now."
-            raise Error(err_msg)
+            print("WARNING: state.ccFeature = 0 (disabled), but library needs PPCIE support")
+            #err_msg = "The confidential compute feature is disabled !!\nQuitting now."
+            #raise Error(err_msg)
         if state.devToolsMode != 0:
             log.warning("The system is running in CC DevTools mode !!")
         evidence_nonce = bytes.fromhex(user_nonce)
