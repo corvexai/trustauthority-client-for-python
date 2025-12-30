@@ -21,6 +21,8 @@ jobs:
         run: |
           if [ ${{ github.repository }} == 'intel/trustauthority-client-for-python' ]; then
             echo "runner=ubuntu-latest" >> $GITHUB_OUTPUT
+          elif [ ${{ github.repository }} == 'corvexai/trustauthority-client-for-python' ]; then
+            echo "runner=ubuntu-latest" >> $GITHUB_OUTPUT
           else
             echo "runner=self-hosted" >> $GITHUB_OUTPUT
           fi
