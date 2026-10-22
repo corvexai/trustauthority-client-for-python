@@ -11,7 +11,7 @@ jobs:
     name: Python CI
     uses: corvexai/gha-python-ci/.github/workflows/ci.yml@2fc6b5c6f449899bb566d4b97e81f45d989ce147 # v0.1.7
     with:
-      workflow_ref: cb035fd6749c198adb47fc22a50c03839f4f5319
+      workflow_ref: 2fc6b5c6f449899bb566d4b97e81f45d989ce147
       python_version: '3.12'
     secrets: inherit
     permissions:
