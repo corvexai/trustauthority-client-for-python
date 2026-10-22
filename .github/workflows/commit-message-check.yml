@@ -15,7 +15,7 @@ jobs:
       contents: read
     steps:
       - name: Check commit message
-        uses: corvexai/gha-commit-message-check@9af3a50e9d082f3c865b5563d543c928504d26e2 # v0.1.0
+        uses: corvexai/gha-commit-message-check@ad377bf68220aa90d054998cd33340d990709a59 # v1.0.3
         with:
           mode: strict
           check_title: true
