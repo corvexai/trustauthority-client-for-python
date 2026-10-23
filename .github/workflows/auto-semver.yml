@@ -19,7 +19,7 @@ jobs:
 
       - name: Increment version and create tag
         id: create-tag
-        uses: corvexai/gha-auto-semver@fe3a7f81000b897d3f7bfdedd6edc7334765ce16 # v0.1.2
+        uses: corvexai/gha-auto-semver@d824c50e31e27747d27fd05f5da7d38ec9223a18 # v0.3.3
         with:
           create_tag: true
           initial_version: 0.1.0
